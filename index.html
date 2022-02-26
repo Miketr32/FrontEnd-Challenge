@@ -5,83 +5,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="./styles.css">
   <title>Frontend Mentor | Bookmark landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <nav class="navBar">
+    <div class="logo">
+      <img src='./images/logo-bookmark.svg' alt='logo'/>
+    </div>
+    <ul class="buttons-navBar">
+      <a class="button-navBar" href="#features">FEATURES</a>
+      <a class="button-navBar" href="#pricing">PRICING</a>
+      <a class="button-navBar" href="#contact">CONTACT</a>
+      <button class="button-login">LOGIN</button>
+    </ul>
+  </nav>
+  <section class="first-section">
+    <div class="first-section-desc">
+      <h1>A Simple Bookmark Manager</h1>
+      <p> A clean and simple interface to organize your favourite websites. Open a new 
+        browser tab and see your sites load instantly. Try it for free.</p>
+      <div>
+        <button class="first-section-buttons">Get it on Chrome</button>
+        <button class="first-section-buttons">Get it on Firefox</button>
+      </div>
+    </div>
+    <div class="first-section-img-container">
+      <img src="./images/illustration-hero.svg" alt='first-image'/>
+    </div>
+  </section>
 
-  Features
-  Pricing
-  Contact
-  Login
+  <section id="features" class="second-section">
+    <div class="second-section-desc">
+      <h2>Features</h2>
+      <p>Our aim is to make it quick and easy for you to access your favourite websites. 
+        Your bookmarks sync between your devices so you can access them on the go.</p>
+    </div>
+    <div >
+      <nav class="second-section-buttons">
+        <input 
+        type="button" 
+        name="simple" 
+        value="Simple Bookmarking"
+        class="second-section-button"
+        />
+        <input 
+        type="button" 
+        name='speedy' 
+        value="Speedy Searching"
+        class="second-section-button"
+        />
+        <input 
+        type="button" 
+        name="easy"
+        value="Easy Sharing"
+        class="second-section-button"
+        />
+      </nav>
+      <div>
 
-  A Simple Bookmark Manager
+        <div name="simple" class="center-slider">
+          <div>
+            <img src="./images/illustration-features-tab-1.svg"/>
+          </div>
+          <div>
+            <h2>Bookmark in one click</h2>
+            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
+              gives you complete control over how you manage your favourite sites.</p>
+            <button>More Info</button>
+          </div>
+        </div>
 
-  A clean and simple interface to organize your favourite websites. Open a new 
-  browser tab and see your sites load instantly. Try it for free.
+        <div name="'speedy" class="center-slider">
+          <div>
+            <img src="./images/illustration-features-tab-2.svg"/>
+          </div>
+          <div>
+            <h2>Intelligent search</h2>
+            <p>Our powerful search feature will help you find saved sites in no time at all. 
+              No need to trawl through all of your bookmarks.</p>
+            <button>More Info</button>
+          </div>
+        </div>
 
-  Get it on Chrome
-  Get it on Firefox
+        <div name='easy' class="center-slider">
+          <div>
+            <img src='./images/illustration-features-tab-3.svg'/>
+          </div>
+          <div>
+            <h2>Share your bookmarks</h2>
+            <p>Easily share your bookmarks and collections with others. Create a shareable 
+              link that you can send at the click of a button.</p>
+            <button>More Info</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="third-section">
+    <div class="third-section-desc">
+      <h2>Download the extension</h2>
+      <p> We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+        got a favourite you’d like us to prioritize.</p>
+    </div>
 
-  Features
+    <div class="extensions">
+      <div class="extension">
+        <img 
+        src='./images/logo-chrome.svg' 
+        alt='logo-chrome'
+        class="extLogos"
+        />
+        <h3>Add to Chrome</h3>
+        <p>Minimum version 62</p>
+        <img 
+        src="./images/bg-dots.svg" 
+        alt="dotsBar"
+        class="dotsBar"
+        />
+        <button class="ext-buttons">Add & Install Extension</button>
+      </div>
 
-  Our aim is to make it quick and easy for you to access your favourite websites. 
-  Your bookmarks sync between your devices so you can access them on the go.
+      <div class="extension">
+        <img 
+        src='./images/logo-firefox.svg' 
+        alt="logo-firefox"
+        class="extLogos"
+        />
+        <h3>Add to Firefox</h3>
+        <p>Minimum version 55</p>
+        <img 
+        src="./images/bg-dots.svg" 
+        alt="dotsBar"
+        class="dotsBar"
+        />
+        <button class="ext-buttons">Add & Install Extension</button>
+      </div>
 
-  Simple Bookmarking
-  Speedy Searching
-  Easy Sharing
-
-  Bookmark in one click
-
-  Organize your bookmarks however you like. Our simple drag-and-drop interface 
-  gives you complete control over how you manage your favourite sites.
-
-  More Info
-
-  Intelligent search
-
-  Our powerful search feature will help you find saved sites in no time at all. 
-  No need to trawl through all of your bookmarks.
-
-  More Info
-
-  Share your bookmarks
-
-  Easily share your bookmarks and collections with others. Create a shareable 
-  link that you can send at the click of a button.
-
-  More Info
-
-  Download the extension
-
-  We’ve got more browsers in the pipeline. Please do let us know if you’ve 
-  got a favourite you’d like us to prioritize.
-
-  Add to Chrome
-  Minimum version 62
-  Add & Install Extension
-
-  Add to Firefox
-  Minimum version 55
-  Add & Install Extension
-
-  Add to Opera
-  Minimum version 46
-  Add & Install Extension
-
-  Frequently Asked Questions
-  
-  Here are some of our FAQs. If you have any other questions you’d like 
-  answered please feel free to email us.
-
-  <!-- Question 1 -->
+      <div class="extension">
+        <img 
+        src="./images/logo-opera.svg" 
+        alt="logo-opera"
+        class="extLogos"
+        />
+        <h3>Add to Opera</h3>
+        <p>Minimum version 46</p>
+        <img 
+        src="./images/bg-dots.svg" 
+        alt="dotsBar"
+        class="dotsBar"
+        />
+        <button class="ext-buttons">Add & Install Extension</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <h2>Frequently Asked Questions</h2>
+      <p> Here are some of our FAQs. If you have any other questions you’d like 
+        answered please feel free to email us.</p>
+    </div>
+    <div>
+       <!-- Question 1 -->
   What is Bookmark?
 
   <!-- Answer 1 -->
@@ -111,23 +200,30 @@
   <!-- Answer 4 -->
   Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
   vitae neque eget nisl gravida pellentesque non ut velit.
-
-  More Info
-
-  35,000+ already joined
-
-  Stay up-to-date with what we’re doing
-
-  Contact Us
-
-  Features
-  Pricing
-  Contact
-  
+    </div>
+    <div>
+      <button>More Info</button>
+    </div>
+  </section>
+  <section id="contact">
+    <div>
+      <p>35,000+ already joined</p>
+      <h2>Stay up-to-date with what we’re doing</h2>
+    </div>
+    <form>
+      <input type='text'/>
+      <button>Contact Us</button>
+    </form>
+    <nav>
+      <p>Features</p>
+      <p>Pricing</p>
+      <p>Contact</p>
+    </nav>
+  </section>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Miguel Coronel</a>.
     </p>
   </footer>
 </body>
