@@ -1,3 +1,4 @@
+import React , {useState} from 'react'
 import './App.css';
 import logo from './images/logo-bookmark.svg'
 import firstImage from './images/illustration-hero.svg'
@@ -8,13 +9,54 @@ import logoChrome from './images/logo-chrome.svg'
 import logoFirefox from './images/logo-firefox.svg'
 import logoOpera from './images/logo-opera.svg'
 import dotsBar from './images/bg-dots.svg'
+import logoFacebook from './images/icon-facebook.svg'
+import logoTwitter from './images/icon-twitter.svg'
+import logoFooter from './images/logo-bookmark-footer.svg'
+import burgerLogo from './images/icon-hamburger.svg'
 
 function App() {
+  const [slider, setSlider] = useState('simple');
+  const [question, setQuestion] = useState(0);
+  const [contacto, setContacto] = useState('');
+  const [options, setOptions] = useState(false);
+
+  const handleChange = (e) => {
+    setSlider([e.target.value] = e.target.name)
+  }
+
+  const open = (e) => {
+    e.preventDefault()
+    if(e.target.value === '1') setQuestion(1);
+    else if(e.target.value === '2') setQuestion(2);
+    else if (e.target.value === '3') setQuestion(3);
+    else if (e.target.value === '4') setQuestion(4);
+    else setQuestion(0)
+  }
+
+  const validador = (e) => {
+
+    setContacto([e.target.name] = e.target.value)
+  }
+
+  const validacion = () => {
+    let exp = 'expresion regular'
+    if(contacto !== exp) return setContacto('error');
+    setContacto('success')
+  }
+
+  const opciones =() => {
+    setOptions(true);
+
+  }
+
   return (
     <>
       <nav class="navBar">
         <div class="logo">
           <img src={logo} alt='logo'/>
+        </div>
+        <div class='burgerLogo'>
+          <img src={burgerLogo} alt='burguer' onClick={opciones}/>
         </div>
         <ul class="buttons-navBar">
           <a class="button-navBar" href="#features">FEATURES</a>
@@ -28,13 +70,18 @@ function App() {
           <h1>A Simple Bookmark Manager</h1>
           <p> A clean and simple interface to organize your favourite websites. Open a new 
             browser tab and see your sites load instantly. Try it for free.</p>
-          <div>
-            <button class="first-section-buttons">Get it on Chrome</button>
-            <button class="first-section-buttons">Get it on Firefox</button>
+          <div class='first-buttons'>
+            <button class="first-section-buttons chromeButt">Get it on Chrome</button>
+            <button class="first-section-buttons firefoxButt">Get it on Firefox</button>
           </div>
         </div>
         <div class="first-section-img-container">
+          <div class='forma'>
+            <div class='square'> </div>
+            <div class='circle'> </div>
+          </div>
           <img src={firstImage} alt='first'/>
+  
         </div>
       </section>
     
@@ -46,22 +93,31 @@ function App() {
         </div>
         <div >
           <nav class="second-section-buttons">
-            <a
+            <button
             class="second-section-button"
-            href='#simple'
-            >Simple Bookmarking</a>
-            <a 
+            name='simple'
+            onClick={handleChange}
+            >Simple Bookmarking</button>
+            <button 
             class="second-section-button"
-            href='#speedy'
-            >Speedy Searching</a>
-            <a
+            name='speedy'
+            onClick={handleChange}
+            >Speedy Searching</button>
+            <button
             class="second-section-button"
-            href='#easy'
-            >Easy Sharing</a>
+            onClick={handleChange}
+            name='easy'
+            >Easy Sharing</button>
           </nav>
+          
         <div class='form-slide'>
             <div class='sliders'>
+            { slider === 'simple' ?
               <div id="simple" class="center-slider">
+                <div class='forma2'>
+                  <div class='square2'> </div>
+                  <div class='circle2'> </div>
+                </div>
                 <div>
                   <img src={slider1} alt='slider1'/>
                 </div>
@@ -72,8 +128,12 @@ function App() {
                   <button class='sliders-button'>More Info</button>
                 </div>
               </div>
-
+              : slider === 'speedy' ?
               <div id="speedy" class="center-slider">
+                <div class='forma2'>
+                  <div class='square2'> </div>
+                  <div class='circle2'> </div>
+                </div>
                 <div>
                   <img src={slider2} alt='slider2'/>
                 </div>
@@ -84,8 +144,12 @@ function App() {
                   <button class='sliders-button'>More Info</button>
                 </div>
               </div>
-
+              :
               <div id='easy' class="center-slider">
+                <div class='forma2'>
+                  <div class='square2'> </div>
+                  <div class='circle2'> </div>
+                </div>
                 <div>
                   <img src={slider3} alt='slider3'/>
                 </div>
@@ -96,6 +160,7 @@ function App() {
                   <button class='sliders-button'>More Info</button>
                 </div>
               </div>
+          }
             </div>
           </div>
         </div>
@@ -158,65 +223,123 @@ function App() {
           </div>
         </div>
       </section>
-      <section>
+
+      <section class='questions'>
         <div>
           <h2>Frequently Asked Questions</h2>
           <p> Here are some of our FAQs. If you have any other questions you’d like 
             answered please feel free to email us.</p>
         </div>
-        <div>
-        { /*
-           <!-- Question 1 -->
-      What is Bookmark?
-    
-      <!-- Answer 1 -->
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
-      justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-    
-      <!-- Question 2 -->
-      How can I request a new browser?
-    
-      <!-- Answer 2 -->
-      Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
-      Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
-      ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
-      Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-    
-      <!-- Question 3 -->
-      Is there a mobile app?
-    
-      <!-- Answer 3 -->
-      Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
-      urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
-      sollicitudin ex et ultricies bibendum.
-    
-      <!-- Question 4 -->
-      What about other Chromium browsers?
-    
-      <!-- Answer 4 -->
-      Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
-      vitae neque eget nisl gravida pellentesque non ut velit. */}
+
+        <div class='question-slides'>
+
+          <div class='question-slide' >
+            <hr></hr>
+            <button 
+            value= '1' 
+            onClickCapture={open}
+            className='questionButtons'
+            >
+            What is Bookmark?
+            </button>
+            <ul className={question === 1 ? 'answer2' : 'answer'} >
+              <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+              justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+              </li>
+            </ul>
+          </div>
+      
+          <div class='question-slide'>
+            <hr></hr>
+            <button
+            value= '2' 
+            onClick={open}
+            className='questionButtons'>
+            How can I request a new browser?
+            </button>
+            <ul className={question === 2 ? 'answer2' : 'answer'} >
+              <li>
+              Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+              Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
+              ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
+              Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+              </li>
+            </ul>
+          </div>
+
+          <div class='question-slide'>
+            <hr></hr>
+            <button 
+            value='3'
+            onClickCapture={open}
+            className='questionButtons'>
+            Is there a mobile app?
+            </button>
+            <ul className={question === 3? 'answer2' : 'answer'} >
+              <li>
+              Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+              urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
+              sollicitudin ex et ultricies bibendum.
+              </li>
+            </ul>
+          </div>
+
+          <div class='question-slide'>
+            <hr></hr>
+            <button 
+            value='4'
+            onClickCapture={open}
+            className='questionButtons'>
+            What about other Chromium browsers?
+            </button>
+            <ul className={question === 4 ? 'answer2' : 'answer'} >
+              <li>
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+                vitae neque eget nisl gravida pellentesque non ut velit.
+              </li>
+            </ul>
+            <hr></hr>
+          </div>
+ 
         </div>
         <div>
-          <button>More Info</button>
+          <button class='info-button'>More Info</button>
         </div>
       </section>
       <section id="contact" class="contact">
-        <div>
-          <p>35,000+ already joined</p>
-          <h2>Stay up-to-date with what we’re doing</h2>
-        </div>
-        <form>
-          <input type='text'/>
-          <button>Contact Us</button>
+          <div className='contactForm'>
+          <div>
+          <p style={{color:'white'}}>35,000+ already joined</p>
+          </div>
+          <div>
+          <h2 style={{color:'white'}}>Stay up-to-date with what we’re doing</h2>
+          </div>
+        <form class='form'>
+          <input 
+          type='email' 
+          class='input'
+          onChange={validador}
+          placeholder='Enter your email address'
+          required
+          />
+          <button class='contact-button' onClick={validacion}>Contact Us</button>
         </form>
+        </div>
       </section>
     
       <section class="footer">
-        <nav>
-          <p>Features</p>
-          <p>Pricing</p>
-          <p>Contact</p>
+        <nav class='footerBar'>
+        <div class='footerBar-options'>
+        <img src={logoFooter} alt='logo' class='footerLogo'/>
+          <a class="footerBar-option" href="#features">FEATURES</a>
+          <a class="footerBar-option" href="#pricing">PRICING</a>
+          <a class="footerBar-option" href="#contact">CONTACT</a>
+        </div>
+        <div class='footerBar-logos'>
+          <img src={logoFacebook} alt='logo-facebook' className='logoFacebook'/>
+          <img src={logoTwitter} alt='logo-twitter' className='logoTwitter'/>
+        </div>
         </nav>
       </section>
     
