@@ -1,6 +1,7 @@
 # Frontend Mentor - Bookmark landing page solution
 
-This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0b588a9edda32581d29158). 
+
 
 ## Table of contents 📑
 
@@ -34,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/css-react-html-grid-andflex-styles-Cw-8Jh9Mg)
-- Live Site URL: [Add live site URL here](https://front-end-challenge-mu.vercel.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/css-react-html-grid-andflex-styles-Cw-8Jh9Mg)
+- [Live Site URL](https://front-end-challenge-mu.vercel.app/)
 
 ## My process
 
