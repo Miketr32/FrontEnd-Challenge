@@ -30,12 +30,16 @@ Users should be able to:
 
 ### Screenshot
 
+<div>
+  <img src='https://user-images.githubusercontent.com/86069194/158265280-a9c19721-7cf1-47b4-b31d-897058b61e50.jpg' width='400px' height='200px' align='center'/>
+  <img src='https://user-images.githubusercontent.com/86069194/158265289-922af3ed-8e3e-41f9-a4a1-80d00250d499.jpg' width='400px' height='200px' align='center'/>
+</div>
+<br>
+<div>
+  <img src='https://user-images.githubusercontent.com/86069194/158265294-eb47091e-41d2-4794-86cb-70fa47aefbc0.jpg' width='400px' height='200px'/>
+  <img src='https://user-images.githubusercontent.com/86069194/158265298-7050d6d1-4dda-42f2-843c-ed41c09d1557.jpg' width='400px' height='200px'/>
+</div>
 
-![ScreenShot1](https://user-images.githubusercontent.com/86069194/158265280-a9c19721-7cf1-47b4-b31d-897058b61e50.jpg)
-
-![ScreenShot2](https://user-images.githubusercontent.com/86069194/158265289-922af3ed-8e3e-41f9-a4a1-80d00250d499.jpg)
-![ScreenShot3](https://user-images.githubusercontent.com/86069194/158265294-eb47091e-41d2-4794-86cb-70fa47aefbc0.jpg)
-![ScreenShot4](https://user-images.githubusercontent.com/86069194/158265298-7050d6d1-4dda-42f2-843c-ed41c09d1557.jpg)
 
 ### Links
 
